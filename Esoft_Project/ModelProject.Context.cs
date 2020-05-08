@@ -13,10 +13,10 @@ namespace Esoft_Project
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class WFTutorialEntities2 : DbContext
+    public partial class WFProject : DbContext
     {
-        public WFTutorialEntities2()
-            : base("name=WFTutorialEntities2")
+        public WFProject()
+            : base("name=WFProject")
         {
         }
     
@@ -27,6 +27,10 @@ namespace Esoft_Project
     
         public virtual DbSet<AgentSet> AgentSet { get; set; }
         public virtual DbSet<ClientSet> ClientSet { get; set; }
+        public virtual DbSet<DealSet> DealSet { get; set; }
+        public virtual DbSet<DemandSet> DemandSet { get; set; }
         public virtual DbSet<RealEstateSet> RealEstateSet { get; set; }
+        public virtual DbSet<SupplySet> SupplySet { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }

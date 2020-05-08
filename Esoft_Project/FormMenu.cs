@@ -15,6 +15,8 @@ namespace Esoft_Project
         public Menu()
         {
             InitializeComponent();
+            if (FormAuthorization.users.type == "agent") buttonOpenAgents.Enabled = false;
+            label1.Text = "Приветствую тебя, " + FormAuthorization.users.login;
         }
 
         private void buttonOpenClients_Click(object sender, EventArgs e)
@@ -32,13 +34,36 @@ namespace Esoft_Project
 
         private void buttonOpenSupplies_Click(object sender, EventArgs e)
         {
-
+            Form formDemand = new FormDemand();
+            formDemand.Show();
         }
 
         private void buttonOpenRealEstates_Click(object sender, EventArgs e)
         {
             Form formRealEstate = new FormRealEstate();
             formRealEstate.Show();
+        }
+
+        private void buttonOpenDemands_Click(object sender, EventArgs e)
+        {
+            Form formSupply = new FormSupply();
+            formSupply.Show();
+        }
+
+        private void buttonOpenDeals_Click(object sender, EventArgs e)
+        {
+            Form formDeal = new FormDeal();
+            formDeal.Show();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

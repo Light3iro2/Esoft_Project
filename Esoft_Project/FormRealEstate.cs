@@ -30,36 +30,6 @@ namespace Esoft_Project
 
         }
 
-        private void listViewRealEstateSet_Apartment_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listViewRealEstateSet_Apartment.SelectedItems.Count == 0)
-            {
-                RealEstateSet realEstate = listViewRealEstateSet_Apartment.SelectedItems[0].Tag as RealEstateSet;
-                //Указываем, что можем изменить
-                textBoxAddress_City.Text = realEstate.Address_City;
-                textBoxAddress_Street.Text = realEstate.Address_Street;
-                textBoxAddress_House.Text = realEstate.Address_House;
-                textBoxAddress_Number.Text = realEstate.Address_Number;
-                textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
-                textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
-                textBoxTotalArea.Text = realEstate.TotalArea.ToString();
-                textBoxRooms.Text = realEstate.Rooms.ToString();
-                textBoxFloor.Text = realEstate.Floor.ToString();
-            }
-            else
-            {
-                textBoxAddress_City.Text = "";
-                textBoxAddress_Street.Text = "";
-                textBoxAddress_House.Text = "";
-                textBoxAddress_Number.Text = "";
-                textBoxCoordinate_latitude.Text = "";
-                textBoxCoordinate_longitude.Text = "";
-                textBoxTotalArea.Text = "";
-                textBoxRooms.Text = "";
-                textBoxFloor.Text = "";
-            }
-        }
-
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxType.SelectedIndex == 0)
@@ -305,7 +275,7 @@ namespace Esoft_Project
         private void listViewRealEstateSet_House_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Если выбран один элемент, то..
-            if (listViewRealEstateSet_Apartment.SelectedItems.Count == 1)
+            if (listViewRealEstateSet_House.SelectedItems.Count == 1)
             {
                 // Ищем элемент из таблицы по тэгу
                 RealEstateSet realEstate = listViewRealEstateSet_Apartment.SelectedItems[0].Tag as RealEstateSet;
@@ -317,8 +287,7 @@ namespace Esoft_Project
                 textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
                 textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
                 textBoxTotalArea.Text = realEstate.TotalArea.ToString();
-                textBoxFloor.Text = realEstate.Floor.ToString();
-                textBoxRooms.Text = realEstate.Rooms.ToString();
+                textBoxTotalFloors.Text = realEstate.TotalArea.ToString();
             }
             else
             {
@@ -330,8 +299,7 @@ namespace Esoft_Project
                 textBoxCoordinate_latitude.Text = "";
                 textBoxCoordinate_longitude.Text = "";
                 textBoxTotalArea.Text = "";
-                textBoxFloor.Text = "";
-                textBoxRooms.Text = "";
+                textBoxTotalFloors.Text = "";
             }
         }
 
@@ -423,6 +391,35 @@ namespace Esoft_Project
         private void textBoxAddress_Number_KeyPress(object sender, KeyPressEventArgs e)
         {
         }
+        private void listViewRealEstateSet_Apartment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewRealEstateSet_Apartment.SelectedItems.Count == 1)
+            {
+                RealEstateSet realEstate = listViewRealEstateSet_Apartment.SelectedItems[0].Tag as RealEstateSet;
+                //Указываем, что можем изменить
+                textBoxAddress_City.Text = realEstate.Address_City;
+                textBoxAddress_Street.Text = realEstate.Address_Street;
+                textBoxAddress_House.Text = realEstate.Address_House;
+                textBoxAddress_Number.Text = realEstate.Address_Number;
+                textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
+                textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
+                textBoxTotalArea.Text = realEstate.TotalArea.ToString();
+                textBoxRooms.Text = realEstate.Rooms.ToString();
+                textBoxFloor.Text = realEstate.Floor.ToString();
+            }
+            else
+            {
+                textBoxAddress_City.Text = "";
+                textBoxAddress_Street.Text = "";
+                textBoxAddress_House.Text = "";
+                textBoxAddress_Number.Text = "";
+                textBoxCoordinate_latitude.Text = "";
+                textBoxCoordinate_longitude.Text = "";
+                textBoxTotalArea.Text = "";
+                textBoxRooms.Text = "";
+                textBoxFloor.Text = "";
+            }
+        }
 
         private void textBoxCoordinate_latitude_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -496,6 +493,95 @@ namespace Esoft_Project
         private void labelTotalFloors_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormRealEstate_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewRealEstateSet_Land_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+                if (listViewRealEstateSet_Apartment.SelectedItems.Count == 1)
+                {
+                    RealEstateSet realEstate = listViewRealEstateSet_Apartment.SelectedItems[0].Tag as RealEstateSet;
+                    //Указываем, что можем изменить
+                    textBoxAddress_City.Text = realEstate.Address_City;
+                    textBoxAddress_Street.Text = realEstate.Address_Street;
+                    textBoxAddress_House.Text = realEstate.Address_House;
+                    textBoxAddress_Number.Text = realEstate.Address_Number;
+                    textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
+                    textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
+                    textBoxTotalArea.Text = realEstate.TotalArea.ToString();
+                    textBoxRooms.Text = realEstate.Rooms.ToString();
+                    textBoxFloor.Text = realEstate.Floor.ToString();
+                }
+                else
+                {
+                    textBoxAddress_City.Text = "";
+                    textBoxAddress_Street.Text = "";
+                    textBoxAddress_House.Text = "";
+                    textBoxAddress_Number.Text = "";
+                    textBoxCoordinate_latitude.Text = "";
+                    textBoxCoordinate_longitude.Text = "";
+                    textBoxTotalArea.Text = "";
+                    textBoxRooms.Text = "";
+                    textBoxFloor.Text = "";
+                }
+        }
+
+        private void listViewRealEstateSet_House_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (listViewRealEstateSet_House.SelectedItems.Count == 1)
+            {
+                RealEstateSet realEstate = listViewRealEstateSet_House.SelectedItems[0].Tag as RealEstateSet;
+                //Указываем, что можем изменить
+                textBoxAddress_City.Text = realEstate.Address_City;
+                textBoxAddress_Street.Text = realEstate.Address_Street;
+                textBoxAddress_House.Text = realEstate.Address_House;
+                textBoxAddress_Number.Text = realEstate.Address_Number;
+                textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
+                textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
+                textBoxTotalArea.Text = realEstate.TotalArea.ToString();
+                textBoxTotalFloors.Text = realEstate.Floor.ToString();
+            }
+            else
+            {
+                textBoxAddress_City.Text = "";
+                textBoxAddress_Street.Text = "";
+                textBoxAddress_House.Text = "";
+                textBoxAddress_Number.Text = "";
+                textBoxCoordinate_latitude.Text = "";
+                textBoxCoordinate_longitude.Text = "";
+                textBoxTotalArea.Text = "";
+                textBoxTotalFloors.Text = "";
+            }
+        }
+
+        private void listViewRealEstateSet_Land_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewRealEstateSet_Land.SelectedItems.Count == 1)
+            {
+                RealEstateSet realEstate = listViewRealEstateSet_Land.SelectedItems[0].Tag as RealEstateSet;
+                //Указываем, что можем изменить
+                textBoxAddress_City.Text = realEstate.Address_City;
+                textBoxAddress_Street.Text = realEstate.Address_Street;
+                textBoxAddress_House.Text = realEstate.Address_House;
+                textBoxAddress_Number.Text = realEstate.Address_Number;
+                textBoxCoordinate_latitude.Text = realEstate.Coordinate_latitude.ToString();
+                textBoxCoordinate_longitude.Text = realEstate.Coordinate_longitude.ToString();
+                textBoxTotalArea.Text = realEstate.TotalArea.ToString();
+            }
+            else
+            {
+                textBoxAddress_City.Text = "";
+                textBoxAddress_Street.Text = "";
+                textBoxAddress_House.Text = "";
+                textBoxAddress_Number.Text = "";
+                textBoxCoordinate_latitude.Text = "";
+                textBoxCoordinate_longitude.Text = "";
+                textBoxTotalArea.Text = "";
+            }
         }
     }
 }

@@ -44,32 +44,24 @@ namespace Esoft_Project
         {
                 if (listViewAgent.SelectedItems.Count == 1)
                 {
-                    // Ищем элемент из таблицы по тэгу
                     AgentSet agentSet = listViewAgent.SelectedItems[0].Tag as AgentSet;
-                    // Указываем, что может быть изменено
                     agentSet.FirstName = textBoxFirstName.Text;
                     agentSet.MiddleName = textBoxMiddleName.Text;
                     agentSet.LastName = textBoxLastName.Text;
                     agentSet.DealShare = Convert.ToInt32(textBoxDearShare.Text);
-                    // Сохраняем изменения в модели
                     Program.wftDb.SaveChanges();
-                    // Отоброжаем в listView
                     ShowAgent();
                 }
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-                //Создаём новый экземпляр класса Клиент
                 AgentSet agentSet = new AgentSet();
-                //делаем ссылку на объект, который хранится в textBox'ах
                 agentSet.FirstName = textBoxFirstName.Text;
                 agentSet.MiddleName = textBoxMiddleName.Text;
                 agentSet.LastName = textBoxLastName.Text;
                 agentSet.DealShare = Convert.ToInt32(textBoxDearShare.Text);
-                // Добавляем в таблицу ClientSet нового клиента clientSet
                 Program.wftDb.AgentSet.Add(agentSet);
-                // Сохраняем изменения в модели wftDb
                 Program.wftDb.SaveChanges();
                 ShowAgent();
         }

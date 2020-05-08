@@ -54,6 +54,7 @@
             // 
             // textBoxFirstName
             // 
+            this.textBoxFirstName.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxFirstName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxFirstName.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBoxFirstName.Location = new System.Drawing.Point(12, 116);
@@ -68,6 +69,7 @@
             // 
             // textBoxMiddleName
             // 
+            this.textBoxMiddleName.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxMiddleName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxMiddleName.Location = new System.Drawing.Point(12, 160);
             this.textBoxMiddleName.Multiline = true;
@@ -78,6 +80,7 @@
             // 
             // textBoxLastName
             // 
+            this.textBoxLastName.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxLastName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLastName.Location = new System.Drawing.Point(12, 201);
             this.textBoxLastName.Multiline = true;
@@ -88,6 +91,7 @@
             // 
             // textBoxPhone
             // 
+            this.textBoxPhone.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxPhone.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPhone.Location = new System.Drawing.Point(130, 116);
             this.textBoxPhone.Multiline = true;
@@ -99,6 +103,7 @@
             // 
             // textBoxEmail
             // 
+            this.textBoxEmail.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxEmail.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxEmail.Location = new System.Drawing.Point(130, 160);
             this.textBoxEmail.Multiline = true;
@@ -161,10 +166,12 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.BackColor = System.Drawing.Color.LightGray;
+            this.buttonAdd.BackColor = System.Drawing.Color.White;
             this.buttonAdd.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.Location = new System.Drawing.Point(352, 227);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(15);
             this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Padding = new System.Windows.Forms.Padding(7);
             this.buttonAdd.Size = new System.Drawing.Size(100, 36);
             this.buttonAdd.TabIndex = 11;
             this.buttonAdd.Text = "Создать";
@@ -173,10 +180,12 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.BackColor = System.Drawing.Color.LightGray;
+            this.buttonEdit.BackColor = System.Drawing.Color.White;
             this.buttonEdit.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEdit.Location = new System.Drawing.Point(458, 227);
+            this.buttonEdit.Location = new System.Drawing.Point(459, 227);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(15);
             this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Padding = new System.Windows.Forms.Padding(7);
             this.buttonEdit.Size = new System.Drawing.Size(100, 36);
             this.buttonEdit.TabIndex = 12;
             this.buttonEdit.Text = "Изменить";
@@ -185,10 +194,12 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.BackColor = System.Drawing.Color.LightGray;
+            this.buttonDel.BackColor = System.Drawing.Color.White;
             this.buttonDel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.Location = new System.Drawing.Point(564, 227);
+            this.buttonDel.Margin = new System.Windows.Forms.Padding(15);
             this.buttonDel.Name = "buttonDel";
+            this.buttonDel.Padding = new System.Windows.Forms.Padding(7);
             this.buttonDel.Size = new System.Drawing.Size(100, 36);
             this.buttonDel.TabIndex = 13;
             this.buttonDel.Text = "Удалить";
